@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aniversário da Gegêeeeeeeee</title>
+    <title>Para Geovanna ❤️</title>
 
     <style>
 
@@ -204,7 +204,7 @@
 
             width: 800px;
 
-            margin: 80px auto 150px;
+            margin: 80px auto 100px;
 
             padding: 40px;
 
@@ -236,6 +236,86 @@
             line-height: 1.7;
 
             text-align: left;
+        }
+
+
+        /* =========================
+           ÚLTIMA FOTO
+        ========================= */
+
+        .ultima-foto-area {
+
+            width: 100%;
+
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+
+        .ultima-foto {
+
+            width: 450px;
+
+            max-width: 85%;
+
+            height: auto;
+
+            border: 10px solid white;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
+
+            transform: rotate(-2deg);
+        }
+
+
+        /* =========================
+           BOTÃO DA MÚSICA
+        ========================= */
+
+        .musica-area {
+
+            text-align: center;
+
+            margin-bottom: 120px;
+        }
+
+
+        .botao-musica {
+
+            background: #e85d8f;
+
+            color: white;
+
+            border: none;
+
+            padding: 18px 35px;
+
+            border-radius: 50px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.2);
+
+            transition: 0.2s;
+        }
+
+
+        .botao-musica:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        .botao-musica:active {
+
+            transform: scale(0.97);
         }
 
 
@@ -274,6 +354,12 @@
             .texto-final p {
 
                 font-size: 18px;
+            }
+
+
+            .ultima-foto {
+
+                max-width: 85%;
             }
 
         }
@@ -341,34 +427,103 @@
 
 
     <!-- =====================================
-         TEXTO QUE APARECE DEPOIS DAS FOTOS
+         TEXTO
     ====================================== -->
 
     <div class="texto-final">
 
         <h1>
-            Meu título aqui ❤️
+            Felizz Aniversárioo GegÊeeeeeee (tá ficando idosa já akakakak)
         </h1>
 
 
         <p>
 
-            ESCREVA SEU TEXTO AQUI.
+            Há, achava que ia esquecer seu aniversário?, n mesmo, fiz esse site bestinha só para ficar mais legal espero que tenha ficado legal, (gosto de fazer sites)
 
             <br><br>
 
-            Você pode escrever quantos parágrafos quiser.
+            espero que você tenha um ótimo dia Gegê, você é uma garota muito especial, e terá um dia especial.
+            espero que venha muito mais anos de vida,  aproveite muito seu dia, Considero muito você, umas das pessoas mais sinceras, gentis, e legais que já conheci,
+            com toda certeza, uma das minhas melhores amigas, conte comigo sempre, contia sendo minha amiga para ser minha madrinha, 
 
             <br><br>
 
-            Conforme o texto ficar maior, a página vai
-            aumentar automaticamente e a pessoa poderá
-            arrastar para baixo no celular ou usar o
-            scroll do mouse no computador.
+            
+
+            <br><br>
+
+            Você nasceu no mesmo que dia que o Luan Perereira kaakakakakakkakakakakakakakkakakakkkakakkaakkaka
 
         </p>
 
     </div>
+
+
+
+    <!-- =====================================
+         ÚLTIMA FOTO
+    ====================================== -->
+
+    <div class="ultima-foto-area">
+
+        <img
+            src="foto5.jpg"
+            alt="RAMMMMM"
+            class="ultima-foto"
+        >
+
+    </div>
+
+
+
+    <!-- =====================================
+         BOTÃO DA MÚSICA
+    ====================================== -->
+
+    <div class="musica-area">
+
+        <button
+            class="botao-musica"
+            onclick="tocarMusica()"
+        >
+            🎵 Clique aqui para ouvir
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         MÚSICA
+    ====================================== -->
+
+    <audio id="musica">
+
+        <source
+            src="musica.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+        function tocarMusica() {
+
+            const musica = document.getElementById("musica");
+
+            musica.play();
+
+        }
+
+    </script>
 
 
 </body>
