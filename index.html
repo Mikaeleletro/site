@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Para Geovanna ❤️</title>
@@ -15,30 +17,36 @@
             padding: 0;
         }
 
+
+        /* =========================
+           PÁGINA
+        ========================= */
+
         body {
+
             min-height: 100vh;
 
             background: #ffd9e7;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
             font-family: Arial, sans-serif;
 
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
 
         /* =========================
-           ÁREA DAS FOTOS
+           MURAL
         ========================= */
 
         .mural {
+
             position: relative;
 
             width: 1000px;
+
             height: 700px;
+
+            margin: 40px auto 0;
         }
 
 
@@ -47,6 +55,7 @@
         ========================= */
 
         .imagem-principal {
+
             position: absolute;
 
             width: 400px;
@@ -61,7 +70,8 @@
 
             border: 10px solid white;
 
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.25);
 
             z-index: 3;
         }
@@ -72,6 +82,7 @@
         ========================= */
 
         .foto-esquerda-1 {
+
             position: absolute;
 
             width: 200px;
@@ -86,7 +97,8 @@
 
             border: 8px solid white;
 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.25);
 
             z-index: 2;
         }
@@ -97,6 +109,7 @@
         ========================= */
 
         .foto-esquerda-2-container {
+
             position: absolute;
 
             width: 200px;
@@ -112,6 +125,7 @@
 
 
         .foto-esquerda-2 {
+
             width: 200px;
             height: 240px;
 
@@ -119,17 +133,19 @@
 
             border: 8px solid white;
 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.25);
 
             display: block;
         }
 
 
         /* =========================
-           TEXTO
+           TEXTO EM CIMA DA FOTO
         ========================= */
 
         .texto-foto {
+
             position: absolute;
 
             width: 300px;
@@ -142,6 +158,7 @@
             text-align: center;
 
             font-size: 21px;
+
             font-weight: bold;
 
             color: #5a3041;
@@ -157,6 +174,7 @@
         ========================= */
 
         .foto-direita {
+
             position: absolute;
 
             width: 200px;
@@ -171,25 +189,93 @@
 
             border: 8px solid white;
 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.25);
 
             z-index: 2;
         }
 
 
         /* =========================
-           RESPONSIVO
+           TEXTO FINAL
+        ========================= */
+
+        .texto-final {
+
+            width: 800px;
+
+            margin: 80px auto 150px;
+
+            padding: 40px;
+
+            background: rgba(255, 255, 255, 0.7);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+
+            color: #5a3041;
+        }
+
+
+        .texto-final h1 {
+
+            margin-bottom: 25px;
+
+            font-size: 32px;
+        }
+
+
+        .texto-final p {
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            text-align: left;
+        }
+
+
+        /* =========================
+           CELULAR
         ========================= */
 
         @media (max-width: 900px) {
 
-            body {
-                overflow: auto;
+            .mural {
+
+                transform: scale(0.75);
+
+                transform-origin: top center;
+
+                margin-bottom: -150px;
             }
 
-            .mural {
-                transform: scale(0.75);
+
+            .texto-final {
+
+                width: 90%;
+
+                margin-top: 20px;
+
+                padding: 25px;
             }
+
+
+            .texto-final h1 {
+
+                font-size: 26px;
+            }
+
+
+            .texto-final p {
+
+                font-size: 18px;
+            }
+
         }
 
     </style>
@@ -198,6 +284,11 @@
 
 
 <body>
+
+
+    <!-- =====================================
+         MURAL COM AS FOTOS
+    ====================================== -->
 
     <div class="mural">
 
@@ -246,6 +337,39 @@
         >
 
     </div>
+
+
+
+    <!-- =====================================
+         TEXTO QUE APARECE DEPOIS DAS FOTOS
+    ====================================== -->
+
+    <div class="texto-final">
+
+        <h1>
+            Meu título aqui ❤️
+        </h1>
+
+
+        <p>
+
+            ESCREVA SEU TEXTO AQUI.
+
+            <br><br>
+
+            Você pode escrever quantos parágrafos quiser.
+
+            <br><br>
+
+            Conforme o texto ficar maior, a página vai
+            aumentar automaticamente e a pessoa poderá
+            arrastar para baixo no celular ou usar o
+            scroll do mouse no computador.
+
+        </p>
+
+    </div>
+
 
 </body>
 
