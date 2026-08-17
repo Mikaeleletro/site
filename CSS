@@ -1,0 +1,181 @@
+/* =========================================
+   MURAL DE FOTOS
+========================================= */
+
+.mural {
+    position: relative;
+
+    width: 750px;
+    max-width: 95vw;
+
+    height: 450px;
+
+    margin: 0 auto;
+}
+
+
+/* FOTO PRINCIPAL */
+
+.imagem-principal {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    object-fit: cover;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+
+    border: 8px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 15px 40px rgba(120, 20, 70, 0.3);
+
+    animation: imagemEntrada 2s ease;
+
+    z-index: 3;
+}
+
+
+/* FOTOS MENORES */
+
+.foto-lateral {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(120, 20, 70, 0.3);
+
+    transition: 0.4s ease;
+}
+
+
+/* FOTO ESQUERDA - CIMA */
+
+.foto-esquerda-1 {
+
+    left: 20px;
+    top: 35px;
+
+    transform: rotate(-10deg);
+
+    z-index: 2;
+
+    animation: fotoEsquerda1 2s ease;
+}
+
+
+/* FOTO ESQUERDA - BAIXO */
+
+.foto-esquerda-2 {
+
+    left: 45px;
+    bottom: 25px;
+
+    transform: rotate(8deg);
+
+    z-index: 1;
+
+    animation: fotoEsquerda2 2s ease;
+}
+
+
+/* FOTO DIREITA */
+
+.foto-direita {
+
+    right: 20px;
+    top: 100px;
+
+    transform: rotate(9deg);
+
+    z-index: 2;
+
+    animation: fotoDireita 2s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.foto-lateral:hover {
+
+    transform:
+        scale(1.08)
+        rotate(0deg);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   ANIMAÇÕES DAS FOTOS
+========================================= */
+
+@keyframes fotoEsquerda1 {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-80px)
+            rotate(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            rotate(-10deg);
+    }
+
+}
+
+
+@keyframes fotoEsquerda2 {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-80px)
+            rotate(8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            rotate(8deg);
+    }
+
+}
+
+
+@keyframes fotoDireita {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(80px)
+            rotate(9deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0)
+            rotate(9deg);
+    }
+
+}
