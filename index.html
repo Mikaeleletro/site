@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uma surpresa 💗</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Georgia, 'Times New Roman', serif;
+
+            background:
+                radial-gradient(circle at center, #ffd6e7 0%, #ffb6d2 45%, #ff91bd 100%);
+
+            color: #7a1745;
+        }
+
+
+        /* =========================================
+           TELA INICIAL
+        ========================================= */
+
+        #inicio {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffb6d5,
+                    #ffc8df,
+                    #ff9fc6
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+
+            transition: opacity 1s ease;
+        }
+
+
+        #botaoInicio {
+
+            padding: 18px 35px;
+
+            border: none;
+            border-radius: 50px;
+
+            background: #ffffff;
+
+            color: #d63384;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 25px rgba(150, 30, 90, 0.25);
+
+            transition: 0.3s;
+        }
+
+
+        #botaoInicio:hover {
+
+            transform: scale(1.08);
+
+            box-shadow:
+                0 12px 30px rgba(150, 30, 90, 0.35);
+        }
+
+
+        /* =========================================
+           CONTEÚDO PRINCIPAL
+        ========================================= */
+
+        .conteudo {
+
+            width: 90%;
+            max-width: 700px;
+
+            text-align: center;
+
+            animation: aparecer 2s ease;
+        }
+
+
+        .titulo {
+
+            font-size: clamp(28px, 5vw, 48px);
+
+            margin-bottom: 30px;
+
+            color: #8f2455;
+
+            text-shadow:
+                2px 2px 5px rgba(255,255,255,0.5);
+
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+
+        /* =========================================
+           IMAGEM
+        ========================================= */
+
+        .imagem-container {
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .imagem {
+
+            width: min(70vw, 400px);
+            height: min(70vw, 400px);
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            border: 8px solid rgba(255,255,255,0.8);
+
+            box-shadow:
+                0 15px 40px rgba(120, 20, 70, 0.3);
+
+            animation: imagemEntrada 2s ease;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        .imagem:hover {
+
+            transform: scale(1.03);
+        }
+
+
+        /* =========================================
+           TEXTO ABAIXO
+        ========================================= */
+
+        .mensagem {
+
+            margin-top: 30px;
+
+            font-size: clamp(18px, 3vw, 25px);
+
+            line-height: 1.6;
+
+            color: #7a1745;
+
+            animation: aparecer 3s ease;
+        }
+
+
+        /* =========================================
+           CORAÇÕES
+        ========================================= */
+
+        .coracao {
+
+            position: fixed;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            animation: coracaoSubir 5s linear forwards;
+        }
+
+
+        /* =========================================
+           CONFETES
+        ========================================= */
+
+        .confete {
+
+            position: fixed;
+
+            width: 10px;
+            height: 18px;
+
+            top: -30px;
+
+            pointer-events: none;
+
+            z-index: 999;
+
+            animation-name: cair;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+
+        /* =========================================
+           ANIMAÇÕES
+        ========================================= */
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes imagemEntrada {
+
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        @keyframes flutuar {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes cair {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 1;
+            }
+
+            100% {
+
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        @keyframes coracaoSubir {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+                opacity: 1;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-100vh)
+                    scale(1.5);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .titulo {
+                margin-bottom: 20px;
+            }
+
+            .imagem {
+                border-width: 5px;
+            }
+
+            .mensagem {
+                margin-top: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         TELA DE INÍCIO
+    ========================================== -->
+
+    <div id="inicio">
+
+        <button id="botaoInicio">
+            Clique para começar 💗
+        </button>
+
+    </div>
+
+
+    <!-- =========================================
+         MÚSICA
+    ========================================== -->
+
+    <audio id="musica" loop>
+
+        <!--
+            COLOQUE SUA MÚSICA NA MESMA PASTA
+            DO INDEX.HTML
+
+            Exemplo:
+
+            musica.mp3
+        -->
+
+        <source src="musica.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main class="conteudo">
+
+
+        <h1 class="titulo">
+            Uma surpresa para você 💗
+        </h1>
+
+
+        <div class="imagem-container">
+
+            <!--
+                COLOQUE SUA IMAGEM NA MESMA PASTA
+                E MUDE O NOME ABAIXO.
+
+                Exemplo:
+
+                foto.jpg
+            -->
+
+            <img
+                class="imagem"
+                src="foto.jpg"
+                alt="Uma foto especial"
+            >
+
+        </div>
+
+
+        <p class="mensagem">
+
+            Espero que esse pequeno momento
+            deixe seu dia um pouquinho mais feliz. 💕
+
+        </p>
+
+
+    </main>
+
+
+    <script>
+
+
+        /* =========================================
+           ELEMENTOS
+        ========================================== */
+
+        const inicio = document.getElementById("inicio");
+
+        const botaoInicio = document.getElementById("botaoInicio");
+
+        const musica = document.getElementById("musica");
+
+
+        /* =========================================
+           BOTÃO INICIAL
+        ========================================== */
+
+        botaoInicio.addEventListener("click", function () {
+
+
+            /* Começa a música */
+
+            musica.volume = 0.5;
+
+            musica.play();
+
+
+            /* Faz a tela inicial desaparecer */
+
+            inicio.style.opacity = "0";
+
+
+            setTimeout(function () {
+
+                inicio.style.display = "none";
+
+            }, 1000);
+
+
+            /* Começa os confetes */
+
+            soltarConfetes();
+
+
+            /* Começa os corações */
+
+            setTimeout(function () {
+
+                criarCoracoes();
+
+            }, 1500);
+
+        });
+
+
+
+        /* =========================================
+           CONFETES
+        ========================================== */
+
+        function soltarConfetes() {
+
+
+            const cores = [
+
+                "#ff4f9a",
+                "#ff6b6b",
+                "#ffd166",
+                "#06d6a0",
+                "#4dabf7",
+                "#ffffff",
+                "#c77dff"
+
+            ];
+
+
+            /* Quantidade de confetes */
+
+            for (let i = 0; i < 150; i++) {
+
+
+                const confete = document.createElement("div");
+
+                confete.classList.add("confete");
+
+
+                /* Posição horizontal */
+
+                confete.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                /* Cor aleatória */
+
+                confete.style.backgroundColor =
+                    cores[
+                        Math.floor(Math.random() * cores.length)
+                    ];
+
+
+                /* Tamanho aleatório */
+
+                const tamanho =
+                    Math.random() * 8 + 5;
+
+                confete.style.width =
+                    tamanho + "px";
+
+                confete.style.height =
+                    tamanho * 1.7 + "px";
+
+
+                /* Duração */
+
+                confete.style.animationDuration =
+                    (Math.random() * 3 + 3) + "s";
+
+
+                /* Atraso */
+
+                confete.style.animationDelay =
+                    Math.random() * 1.5 + "s";
+
+
+                /* Rotação inicial */
+
+                confete.style.transform =
+                    "rotate(" +
+                    Math.random() * 360 +
+                    "deg)";
+
+
+                document.body.appendChild(confete);
+
+
+                /* Remove depois da animação */
+
+                setTimeout(function () {
+
+                    confete.remove();
+
+                }, 6000);
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           CORAÇÕES
+        ========================================== */
+
+        function criarCoracoes() {
+
+
+            setInterval(function () {
+
+
+                const coracao =
+                    document.createElement("div");
+
+
+                coracao.classList.add("coracao");
+
+
+                coracao.innerHTML =
+                    Math.random() > 0.5
+                        ? "💗"
+                        : "💕";
+
+
+                coracao.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                coracao.style.top =
+                    "100vh";
+
+
+                coracao.style.fontSize =
+                    (Math.random() * 20 + 15) + "px";
+
+
+                coracao.style.animationDuration =
+                    (Math.random() * 3 + 4) + "s";
+
+
+                document.body.appendChild(coracao);
+
+
+                setTimeout(function () {
+
+                    coracao.remove();
+
+                }, 7000);
+
+
+            }, 1000);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
