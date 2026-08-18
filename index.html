@@ -194,7 +194,47 @@
 
             z-index: 2;
         }
-
+        /* =========================
+           INDICAÇÃO PARA DESCER
+        ========================= */
+        
+        .indicacao-baixo {
+            position: absolute;
+            right: -80px;
+            bottom: 40px;
+        
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            color: #5a3041;
+            font-size: 18px;
+            font-weight: bold;
+        
+            z-index: 10;
+        }
+        
+        .indicacao-baixo .texto-baixo {
+            margin-bottom: 8px;
+            white-space: nowrap;
+        }
+        
+        .seta-baixo {
+            font-size: 45px;
+            line-height: 1;
+        
+            animation: setaDescendo 1s infinite;
+        }
+        
+        @keyframes setaDescendo {
+            0%, 100% {
+                transform: translateY(0);
+            }
+        
+            50% {
+                transform: translateY(12px);
+            }
+        }
 
         /* =========================
            TEXTO FINAL
@@ -422,8 +462,18 @@
             class="foto-direita"
         >
 
+        </div>
+        <div class="indicacao-baixo">
+    
+        <div class="texto-baixo">
+            texto lá embaixo
+        </div>
+    
+        <div class="seta-baixo">
+            ↓
+        </div>
+    
     </div>
-
 
 
     <!-- =====================================
